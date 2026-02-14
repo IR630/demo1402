@@ -1,11 +1,245 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
 
 <head>
-    <title>Первая страница</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusTech | Инновационные решения</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Library (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: white;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #2dd4bf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-bg {
+            background: radial-gradient(circle at top right, #1e3a8a 0%, #0f172a 50%);
+        }
+    </style>
 </head>
 
-<body>
-    <h1>Привет!</h1>
+<body class="overflow-x-hidden">
+
+    <!-- Навигация -->
+    <nav class="fixed w-full z-50 glass py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tighter">
+            <span class="text-blue-500">NEXUS</span>TECH
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
+            <a href="#home" class="hover:text-blue-400 transition">Главная</a>
+            <a href="#services" class="hover:text-blue-400 transition">Услуги</a>
+            <a href="#portfolio" class="hover:text-blue-400 transition">Портфолио</a>
+            <a href="#contact" class="hover:text-blue-400 transition">Контакты</a>
+        </div>
+        <button class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-full text-sm font-semibold transition">
+            Связаться
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen hero-bg flex items-center justify-center pt-20 px-6">
+        <div class="max-w-6xl mx-auto text-center" data-aos="zoom-out" data-aos-duration="1000">
+            <h1 class="text-5xl md:text-8xl font-bold mb-6 leading-tight">
+                Создаем будущее <br> <span class="gradient-text">цифрового мира</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+                Мы превращаем ваши идеи в высокотехнологичные продукты. Профессиональная разработка, дизайн и стратегия
+                роста.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#services"
+                    class="bg-white text-black px-10 py-4 rounded-xl font-bold hover:bg-gray-200 transition">Начать
+                    проект</a>
+                <a href="#" class="glass px-10 py-4 rounded-xl font-bold hover:bg-white/10 transition">Наше видео</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция статистики -->
+    <section class="py-20 border-y border-white/10">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div data-aos="fade-up">
+                <div class="text-4xl font-bold text-blue-500">10+</div>
+                <div class="text-gray-500 uppercase text-xs tracking-widest mt-2">Лет опыта</div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <div class="text-4xl font-bold text-blue-500">250+</div>
+                <div class="text-gray-500 uppercase text-xs tracking-widest mt-2">Проектов</div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <div class="text-4xl font-bold text-blue-500">50+</div>
+                <div class="text-gray-500 uppercase text-xs tracking-widest mt-2">Специалистов</div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+                <div class="text-4xl font-bold text-blue-500">99%</div>
+                <div class="text-gray-500 uppercase text-xs tracking-widest mt-2">Клиентов довольны</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up">Наши Услуги</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Карта 1 -->
+                <div class="glass p-10 rounded-3xl hover:-translate-y-2 transition duration-300 group"
+                    data-aos="fade-up">
+                    <div
+                        class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-500 transition">
+                        <i class="fas fa-code text-2xl text-blue-500 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Web Development</h3>
+                    <p class="text-gray-400 leading-relaxed">Создание быстрых, адаптивных и масштабируемых
+                        веб-приложений на React, Next.js и Vue.</p>
+                </div>
+
+                <!-- Карта 2 -->
+                <div class="glass p-10 rounded-3xl hover:-translate-y-2 transition duration-300 group"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-500 transition">
+                        <i class="fas fa-layer-group text-2xl text-purple-500 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">UI/UX Design</h3>
+                    <p class="text-gray-400 leading-relaxed">Проектирование интуитивно понятных интерфейсов,
+                        ориентированных на пользователя.</p>
+                </div>
+
+                <!-- Карта 3 -->
+                <div class="glass p-10 rounded-3xl hover:-translate-y-2 transition duration-300 group"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-16 h-16 bg-cyan-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-cyan-500 transition">
+                        <i class="fas fa-rocket text-2xl text-cyan-500 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Digital Strategy</h3>
+                    <p class="text-gray-400 leading-relaxed">Аналитика рынка, SEO и запуск продукта, который
+                        гарантированно найдет свою аудиторию.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Портфолио (Сетка) -->
+    <section id="portfolio" class="py-24 bg-slate-900/50 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-bold" data-aos="fade-right">Кейсы</h2>
+                    <p class="text-gray-400 mt-2">Проекты, которыми мы гордимся</p>
+                </div>
+                <a href="#" class="text-blue-500 border-b border-blue-500 pb-1 hover:text-blue-400">Все проекты</a>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="relative overflow-hidden rounded-3xl group" data-aos="zoom-in">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+                        alt="Work"
+                        class="w-full h-[400px] object-cover transition duration-500 group-hover:scale-110 opacity-70">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex flex-col justify-end p-8">
+                        <h4 class="text-2xl font-bold">Fintech App</h4>
+                        <p class="text-gray-300">Платформа для крипто-банкинга</p>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-3xl group" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&w=800&q=80"
+                        alt="Work"
+                        class="w-full h-[400px] object-cover transition duration-500 group-hover:scale-110 opacity-70">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black to-transparent flex flex-col justify-end p-8">
+                        <h4 class="text-2xl font-bold">E-commerce 2.0</h4>
+                        <p class="text-gray-300">Маркетплейс нового поколения</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto glass p-8 md:p-16 rounded-[40px]" data-aos="fade-up">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Обсудим проект?</h2>
+                <p class="text-gray-400">Оставьте заявку, и мы ответим в течение 24 часов.</p>
+            </div>
+
+            <form class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <input type="text" placeholder="Ваше имя"
+                        class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-xl focus:outline-none focus:border-blue-500">
+                    <input type="email" placeholder="Email"
+                        class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-xl focus:outline-none focus:border-blue-500">
+                </div>
+                <textarea rows="4" placeholder="Ваше сообщение"
+                    class="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-xl focus:outline-none focus:border-blue-500"></textarea>
+                <button
+                    class="w-full bg-blue-600 hover:bg-blue-700 py-4 rounded-xl font-bold transition shadow-lg shadow-blue-500/20">
+                    Отправить сообщение
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/10 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:row justify-between items-center gap-8">
+            <div class="text-xl font-bold"><span class="text-blue-500">NEXUS</span>TECH</div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-behance"></i></a>
+            </div>
+            <div class="text-gray-500 text-sm">
+                © 2024 NexusTech. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+
+        // Плавный скролл для навигации
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
